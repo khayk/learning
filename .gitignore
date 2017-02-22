@@ -27,3 +27,7 @@
 *.exe
 *.out
 *.app
+
+# Various
+*.sublime-workspace
+/cpp/build
