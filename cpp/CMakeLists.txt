@@ -12,7 +12,7 @@ if (MSVC)
     set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /W4 ")
 
     # Unicode version for Windows
-    add_definitions (-DUNICODE -D_UNICODE)
+    # add_definitions (-DUNICODE -D_UNICODE)
 
     # Allow to compile with static C++ runtime
     if ("${CPP_RUNTIME}" STREQUAL "STATIC")
@@ -33,10 +33,3 @@ endif (MSVC)
 
 add_subdirectory(sockets)
 
-# set (SRC_FILES ${LIBRARY_FILES}
-#                ${LIBRARY_TEST_FILES}
-#                ${PATTERNS_FILES}
-#                ${PATTERNS_TEST_FILES}
-#                ${OTHER_FILES})
-
-# add_executable(${PROJECT_NAME} ${SRC_FILES})
