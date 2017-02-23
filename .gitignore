@@ -30,4 +30,7 @@
 
 # Various
 *.sublime-workspace
-/cpp/build
+/cpp/build/
+/cpp/cmake-build-debug/
+/cpp/.idea/
+/cpp/bin/
