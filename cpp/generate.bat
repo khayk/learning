@@ -3,6 +3,8 @@
 ::
 :: generate.bat [tool] [arch]
 
+:: @todo: fix build issue for 32 bit application
+
 @echo off
 
 if "%tool%" neq "" goto include_vs_toolset
