@@ -9,23 +9,23 @@ namespace network {
 std::string getIp(const struct in_addr& addr)
 {
   char ip4[INET_ADDRSTRLEN];
-  inet_ntop(AF_INET, &addr, ip4, INET_ADDRSTRLEN);
+  inet_ntop(AF_INET, (void*)&addr, ip4, INET_ADDRSTRLEN);
   return std::string(ip4);
 }
 
 std::string getIp(const struct in6_addr& addr)
 {
   char ip6[INET6_ADDRSTRLEN];
-  inet_ntop(AF_INET6, &addr, ip6, INET6_ADDRSTRLEN);
+  inet_ntop(AF_INET6, (void*)&addr, ip6, INET6_ADDRSTRLEN);
   return std::string(ip6);
 }
 
-std::string getIp4ByHost(const std::string& host)
+std::string getIp4ByHost(const std::string&)
 {
   return std::string();
 }
 
-std::string getIp6ByHost(const std::string& host)
+std::string getIp6ByHost(const std::string&)
 {
   return std::string();
 }
