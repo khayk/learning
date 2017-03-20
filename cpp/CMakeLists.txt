@@ -33,4 +33,5 @@ endif(MSVC)
 
 add_subdirectory(src/boost)
 add_subdirectory(src/sockets)
+add_subdirectory(src/tanenbaum)
 

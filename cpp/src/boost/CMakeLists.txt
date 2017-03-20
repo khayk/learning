@@ -5,7 +5,7 @@ if(MSVC)
 endif(MSVC)
 
 set(SRC_FILES
-    main.cpp
+  main.cpp
 )
 
 set(Boost_USE_STATIC_LIBS ON)
