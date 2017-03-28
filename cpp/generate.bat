@@ -47,6 +47,7 @@ set cmake_command=cmake.exe -G ^"Visual Studio %tool% %studio_name%
 if "%cmake_arch%" neq "" (
     set "cmake_command=%cmake_command% %cmake_arch%"
 )
+:: add  -DCPP_RUNTIME:STRING=STATIC  to smake_command to link with msvc static libs
 set "cmake_command=%cmake_command%^" ^"%source_dir%^""
 
 echo Build directory : %build_dir%

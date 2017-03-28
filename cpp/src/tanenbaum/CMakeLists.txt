@@ -5,6 +5,10 @@ set(SRC_FILES
   ProducerConsumer.cpp
 )
 
+if("${CPP_RUNTIME}" STREQUAL "STATIC")
+  set(GTEST_MSVC_SEARCH "MT")
+endif()
+
 find_package(GTest 1.8 REQUIRED)
 
 add_executable(${PROJECT_NAME} ${SRC_FILES})
