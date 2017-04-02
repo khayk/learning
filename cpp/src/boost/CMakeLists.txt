@@ -11,7 +11,7 @@ set(SRC_FILES
 set(Boost_USE_STATIC_LIBS ON)
 add_executable(${PROJECT_NAME} ${SRC_FILES})
 
-find_package(Boost 1.63.0 REQUIRED COMPONENTS log thread)
+find_package(Boost REQUIRED)
 
 if(Boost_FOUND)
   include_directories(${Boost_INCLUDE_DIRS})

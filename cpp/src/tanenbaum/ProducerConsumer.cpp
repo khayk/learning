@@ -69,7 +69,7 @@ public:
 
   ~Reporter() {
     LockType guard(mutex);
-    std::cout << name_ << " " << action_ << " " << reported_ << " recoreds\n";
+    std::cout << name_ << " " << action_ << " " << reported_ << " records\n";
   }
 
   void report() {
@@ -217,7 +217,7 @@ TEST(ProducerConsumerTest, 1Producer1Consumer)
 
   stopProducers = true;
   p1.join();
-  
+
   stopConsumers = true;
   c1.join();
 
