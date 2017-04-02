@@ -32,7 +32,7 @@ if "%arch%" == "64" set cmake_arch=Win64
 echo Toolset         : %tool%
 echo Architecture    : %arch%
 
-set source_dir=%~dp0
+set source_dir=%~dp0../
 set build_dir=%source_dir%build\vs%tool%-x%arch%
 
 if not exist "%build_dir%" (
