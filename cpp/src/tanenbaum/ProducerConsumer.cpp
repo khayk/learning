@@ -12,7 +12,7 @@ using namespace std::chrono_literals;
 
 #ifdef _WIN32
   #include <windows.h>
-  
+
   typedef HANDLE SemaphoreType;
 #else
   #include <semaphore.h>
@@ -169,7 +169,7 @@ void producer(int number)
   Reporter report("Producer " + std::to_string(number), "produced");
   while (!stopProducers) {
     int item = produceItem<int>();
-    
+
     if (!down(&empty))
       continue;
 
@@ -242,7 +242,7 @@ TEST(ProducerConsumerTest, 2Producer1Consumer)
   stopProducers = true;
   p2.join();
   p1.join();
-  
+
   stopConsumers = true;
   c1.join();
 
