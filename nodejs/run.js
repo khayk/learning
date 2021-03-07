@@ -13,6 +13,9 @@ var idIv = setInterval(function(){
 }, 10);
 
 setTimeout(function() {
+    console.log("Interval id: ", idIv);
+    console.log("Timeout id: ", idTm);
+
     clearInterval(idIv);
     clearTimeout(idTm);
 
