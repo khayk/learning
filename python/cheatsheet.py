@@ -33,3 +33,5 @@ if __name__ == '__main__':
     print(textwrap.wrap(string,8))
     print(textwrap.fill(string,8))
 
+# 9. Make the first letter uppercase
+    'name'.capitalize()
