@@ -2,7 +2,7 @@ import math
 
 def is_prime(n):
     '''Check if the given number is prime or not'''
-    if (n <= 0):
+    if n <= 0:
         raise ValueError('Invalid argument')
 
     i = 2
