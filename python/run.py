@@ -1,19 +1,22 @@
-def minion_game(s):
-    vowels = 0
-    consonants = 0
-    n = len(s)
+an = int(input())
+a = set(map(int, input().split()))
+n = int(input())
 
-    for i in range(n - 1, -1, -1):
-        if s[i] in "AEIOU":
-            vowels += n - i
-        else:
-            consonants += n - i
+for i in range(n):
+    op_name, bn = input().split()
+    bn = int(bn)
+    b = set(map(int, input().split()))
 
-    if vowels > consonants:
-        print('Kevin', vowels)
-    else:
-        print('Stuart', consonants)
+    # print(op_name, bn)
+    # print(b)
+    if op_name == 'update':
+        a.update(b)
+    elif op_name == 'intersection_update':
+        a.intersection_update(b)
+    elif op_name == 'difference_update':
+        a.difference_update(b)
+    elif op_name == 'symmetric_difference_update':
+        a.symmetric_difference_update(b)
 
-if __name__ == '__main__':
-    s = input()
-    minion_game(s)
+print(a)
+print(sum(a))
